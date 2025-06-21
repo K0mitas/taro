@@ -1,0 +1,569 @@
+/* -------------------- */
+/* Общий контейнер   */
+/* -------------------- */
+.rasklad-count {
+  background: radial-gradient(
+    ellipse calc(240px + 10vw) calc(315px + 10vh) at 49% 37%,
+    rgb(39 9 127 / 82%),
+    rgba(6, 0, 23, 1)
+  );
+  width: 100%;
+  min-height: 100dvh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* -------------------- */
+/* Женщина и звёзды  */
+/* -------------------- */
+.ras-woman-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.ras-woman-div-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.info-woman-div-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.ras-woman-wrapper {
+  position: relative;
+  width: min(310px, 80vw);
+}
+
+.ras-woman-wrapper-final {
+  position: relative;
+  width: min(217px, 80vw);
+  top: -40px;
+  right: 6px;
+  animation: fadeIn 0.9s ease-in-out 0.3s both;
+  opacity: 0;
+}
+
+.info-woman-wrapper-final {
+  position: relative;
+  width: min(217px, 80vw);
+  top: -40px;
+  right: 63px;
+  animation: fadeIn 0.9s ease-in-out 0.3s both;
+  opacity: 0;
+
+}
+
+.info-woman-img-final {
+  width: 160%;
+  height: auto;
+  display: block;
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 82%
+  );
+  position: relative;
+  z-index: 1;
+}
+
+.ras-woman-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 0) 82%);
+  position: relative;
+  z-index: 1;
+}
+
+.ras-woman-img-final {
+  width: 105%;
+  height: auto;
+  display: block;
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 82%
+  );
+  position: relative;
+  z-index: 1;
+}
+
+.ras-stars {
+  position: absolute;
+  top: -47px;
+  left: -37px;
+  width: 124%;
+  z-index: 2;
+}
+
+.info-ras-stars {
+  position: absolute;
+  top: -33px;
+  left: -25px;
+  width: 188%;
+  z-index: 2;
+}
+
+.info-ras-second-dialog-div-final {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+/* ------------------------- */
+/* 💬 Диалоги и навигация   */
+/* ------------------------- */
+.ras-dialog-div,
+.ras-second-dialog-div,
+.nav-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.ras-dialog-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ras-second-dialog-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 266px;
+  left: -2px;
+}
+
+.ras-second-dialog-div-final {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 283px;
+  left: -2px;
+
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.ras-second-dialog-div-final.show {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.nav-main-block {
+  display: flex;
+  width: 100%;
+  height: 57px;
+  justify-content: center;
+}
+
+.nav-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 343px;
+  top: 266px;
+  left: -2px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+}
+
+.ras-dialog-block,
+.ras-second-dialog-block {
+  max-width: 343px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.9s ease-in-out 0.3s both;
+  opacity: 0;
+  padding: 12px;
+  
+}
+
+/* ------------------------- */
+/* Тексты и аватар       */
+.ras-first-text-welcom,
+.ras-second-text-welcom {
+  text-align: center;
+  color: #FFDAB9;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.24%;
+  animation: fadeIn 0.9s ease-in-out 0.3s both;
+  opacity: 0;
+}
+
+.ras-dialog-ava-img {
+  width: 48px;
+  height: 48px;
+}
+
+/* 🃏 Карты             */
+.card-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 30px)) translateY(20px);
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.card-block.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.card-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 100vh;
+  perspective: 1000px;
+}
+
+/* Все карточки в стопке */
+.card-img {
+  width: 100px;
+  height: 170px;
+  cursor: pointer;
+  margin-left: -50px;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  touch-action: manipulation;
+}
+
+.card-img:hover {
+  transform: translateY(8px) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 10px 4px #D4AF37;
+  border-radius: 8px;
+}
+
+.card-img.final-position {
+  transition: all 0.9s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-img.final-position.selected-card.pos-0 {
+  left: 30%;
+  transform: translateX(-25%) scale(1.1);
+}
+
+.card-img.final-position.selected-card.pos-1 {
+  left: 50%;
+  transform: translateX(-20%) scale(1.1);
+}
+
+.card-img.final-position.selected-card.pos-2 {
+  left: 70%;
+  transform: translateX(-16%) scale(1.1);
+}
+
+/* Стартовое расположение до выбора */
+.card-0 { transform: translateY(60px) rotate(-18deg); z-index: 1; }
+.card-1 { transform: translateY(40px) rotate(-12deg); z-index: 2; }
+.card-2 { transform: translateY(28px) rotate(-6deg);  z-index: 3; }
+.card-3 { transform: translateY(18px) rotate(0deg);   z-index: 4; }
+.card-4 { transform: translateY(25px) rotate(6deg);   z-index: 5; }
+.card-5 { transform: translateY(40px) rotate(12deg);  z-index: 6; }
+.card-6 { transform: translateY(60px) rotate(18deg);  z-index: 7; }
+
+/* Когда выбрана */
+.selected-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateY(180deg) scale(1.1);
+  z-index: 100;
+  transition: transform 0.8s ease, z-index 0.4s;
+  pointer-events: none;
+}
+
+/* Позиции по порядку выбора */
+.pos-0 {
+  transform: translate(-200px, -200px) rotateY(180deg) scale(1.1);
+}
+.pos-1 {
+  transform: translate(-16%, -200px) rotateY(180deg) scale(1.1);
+}
+.pos-2 {
+  transform: translate(162px, -200px) rotateY(180deg) scale(1.1);
+}
+
+.btn-ras-div {
+  position: absolute;
+  top: 334px;
+  left: -19px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-ras {
+    width: 61%;
+    height: 56px;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 100px;
+    margin-top: 20px;
+    box-shadow: 0 0 7px 1px #D4AF37;
+    cursor: pointer;
+}
+
+.btn-ras-second {
+  width: 61%;
+    height: 56px;
+    background-color: transparent;
+    color: #D4AF37;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #D4AF37;
+    border-radius: 100px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* 🎞 Анимации          */
+.ras-dialog-div.visible,
+.ras-second-dialog-div.visible,
+.nav-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-block.visible {
+  opacity: 1;
+  transform: translate(-47%, calc(-44% + 30px)) translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.ras-woman-div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ras-woman-div.move-up {
+  transform: translateY(-90px);
+  transition: transform 1s ease-out;
+}
+
+.ras-woman-div.move-up .ras-woman-img {
+  transform: scale(0.6);
+  transition: transform 1s ease-out;
+}
+
+.ras-woman-div.move-up .ras-stars {
+  top: 44px;
+  transition: top 1s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+.answer-main-nav-text-block {
+  display: flex;
+  justify-content: center;
+}
+
+.answer-nav-text-div {
+  max-width: 343px;
+  height: auto;
+  display: flex;
+  background-color: #8A4AF3;
+  border-radius: 4px;
+  padding: 16px 12px;
+}
+
+.anser-card-div {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.answer-ras-dialog-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.answer-ras-dialog-block {
+  max-width: 383px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.answer-btn-ras-div {
+  display: flex;
+  justify-content: center;
+}
+
+.answer-btn-ras-div-second {
+  display: flex;
+  justify-content: center;
+  margin-top: 139px;
+}
+
+.answer-btn-ras {
+  width: 340px;
+  height: 56px;
+  background-color: #D4AF37;
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 100px;
+  margin-top: 20px;
+  box-shadow: 0 0 7px 1px #D4AF37;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .card-div {
+    width: 100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-img {
+    width: 100px;
+    height: 170px;
+    margin-left: -50px;
+  }
+
+  .pos-0 {
+    transform: translate(-200px, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-1 {
+    transform: translate(-16%, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-2 {
+    transform: translate(162px, -200px) rotateY(180deg) scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .pos-0 {
+    transform: translate(-146px, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-1 {
+    transform: translate(-15px, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-2 {
+    transform: translate(113px, -200px) rotateY(180deg) scale(1.1);
+  }
+}
+
+@media (min-width: 480px) {
+  .card-img {
+    width: 90px;
+    height: 153px;
+    margin-left: -45px;
+  }
+}
+
+@media (max-width: 425px) {
+  .btn-ras {
+    width: 40%;
+  }
+}
+
+@media (max-width: 370px) {
+  .card-img {
+    width: 90px;
+    height: 119px;
+    margin-left: -35px;
+  }
+  
+  .pos-0 {
+    transform: translate(-144px, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-1 {
+    transform: translate(-27px, -200px) rotateY(180deg) scale(1.1);
+  }
+  .pos-2 {
+    transform: translate(84px, -200px) rotateY(180deg) scale(1.1);
+  }
+
+  .card-img.final-position.selected-card.pos-0 {
+    left: 30%;
+    transform: translateX(-16%) scale(1.1);
+  }
+  
+  .card-img.final-position.selected-card.pos-1 {
+    left: 50%;
+    transform: translateX(-36%) scale(1.1);
+  }
+  
+  .card-img.final-position.selected-card.pos-2 {
+    left: 70%;
+    transform: translateX(-54%) scale(1.1);
+  }
+}
+
+.fade-out-cards {
+  opacity: 0;
+  transition: opacity 1s ease;
+}

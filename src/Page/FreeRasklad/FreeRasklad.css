@@ -1,0 +1,240 @@
+.free-count {
+  background: radial-gradient(ellipse calc(240px + 23vw) calc(175px + 2vh) at 50% 28%, rgb(39 9 127 / 82%), rgba(6, 0, 23, 1));
+  width: 100%;
+  min-height: 100dvh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.free-woman-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.free-woman-wrapper {
+    position: relative;
+    width: min(190px, 80vw); 
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.free-woman-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 0) 82%
+    );
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.9s ease-in forwards; 
+}
+
+.free-woman-img-none {
+    width: 100%;
+    height: auto;
+    display: block;
+    mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 0) 82%
+    );
+    position: relative;
+    z-index: 1;
+    opacity: 0; 
+}
+
+
+.free-stars {
+    position: absolute;
+    top: -60px;
+    left: -108px;
+    width: 198%;
+    z-index: 2;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
+}
+
+.free-dialog-div {
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+    margin-top: -35px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards; 
+}
+
+.free-dialog-div-none {
+    display: none;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+    margin-top: -35px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards; 
+}
+
+.free-dialog-block {
+    max-width: 343px;
+    border-radius: 12px 12px 12px 0;
+    background-color: rgba(211, 211, 211, 0.1);
+    padding: 12px 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.free-text-welcom {
+    text-align: center;
+    color: #FFDAB9;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.24%;
+    margin: 0;
+}
+
+.free-nav-main-block-none {
+    display: none;
+    width: 100%;
+    height: 57px;
+    justify-content: center;
+    position: relative;
+}
+
+.free-nav-main-block {
+    display: flex;
+    width: 100%;
+    height: 57px;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.9s ease-in forwards; 
+}
+
+.free-nav-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 343px;
+    top: 266px;
+    left: -2px;
+    border-radius: 12px 12px 12px 0;
+    background-color: rgba(211, 211, 211, 0.1);
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+  }
+
+
+
+
+
+
+
+  .free-container {
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 0;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+  }
+  
+  .free-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    perspective: 1000px;
+  }
+  
+  .free-card-wrapper {
+    width: 100px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .free-card-wrapper:nth-child(2) {
+    top: 60px; 
+  }
+  
+  .free-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .free-card-wrapper.free-card-selected .free-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .free-card-front,
+  .free-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .free-card-front {
+    background: #D4AF37;
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+
+  .free-card-wrapper:hover {
+    transform: translateY(8px) scale(1.1);
+    z-index: 10;
+    box-shadow: 0 0 10px 4px #D4AF37;
+    border-radius: 8px;
+  }
+  
+  .free-card-back {
+    background: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+  
+  .free-card-wrapper:not(.free-card-selected):hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+  }
+
+
+  
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

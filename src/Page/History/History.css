@@ -1,0 +1,136 @@
+.history-count {
+    background: radial-gradient(
+        ellipse calc(240px + 10vw) calc(315px + 10vh) at 49% 37%,
+        rgb(39 9 127 / 82%),
+        rgba(6, 0, 23, 1)
+      );
+      width: 100%;
+      min-height: 100dvh;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      box-sizing: border-box;
+}
+
+.hitsory-title {
+    text-align: center;
+    font-size: 24px;
+    color: #D4AF37;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.history-woman-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.history-stars {
+    position: absolute;
+    top: -47px;
+    left: -37px;
+    width: 124%;
+    z-index: 2;
+}
+
+.history-woman-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 0) 82%);
+    position: relative;
+    z-index: 1;
+}
+
+.history-woman-wrapper {
+    position: relative;
+    width: min(310px, 80vw);
+}
+
+.history-dialog-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.history-dialog-block {
+  max-width: 343px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0; /* Начальная прозрачность */
+animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.history-first-text-welcom {
+  text-align: center;
+  color: #FFDAB9;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.24%;
+}
+
+.history-btn-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.hist-card-div {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    flex-direction: column;
+  }
+
+.cards-history {
+    display: flex;
+    gap: 16px;
+}
+
+.history-entry {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-history-div {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.data-history-p {
+    color: #D3D3D3;
+    text-align: right;
+    font-size: 16px;
+}
+
+.history-btn {
+    width: 343px;
+    height: 56px;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 100px;
+    margin-top: 20px;
+    box-shadow: 0 0 7px 1px #D4AF37;
+    transition: all 0.3s ease;
+}
+
+.history-btn:hover {
+    box-shadow: 0 0 20px 8px rgba(212, 175, 55, 0.7);
+}

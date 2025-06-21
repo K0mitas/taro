@@ -1,0 +1,153 @@
+.shop-count {
+  background: radial-gradient(
+    ellipse calc(240px + 10vw) calc(315px + 10vh) at 49% 37%,
+    rgb(39 9 127 / 82%),
+    rgba(6, 0, 23, 1)
+    );
+  width: 100%;
+  min-height: 100dvh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.block-shop-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 344px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.block-shop {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(to left, #4A297A, #C68BA3);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid #8A4AF3;
+}
+
+.block-shop-bg-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  background-image: url(./../../Img/cold.svg);
+  background-repeat: no-repeat;
+  background-size: 150% 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid #8A4AF3;
+}
+
+.block-shop-second-bg-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  background-image: url(./../../Img/kompas.jpg);
+  background-repeat: no-repeat;
+  background-size: 150% 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid #8A4AF3;
+}
+
+.block-shop-p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.block-shop-top-p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 76px;
+}
+
+.love-p {
+  margin-bottom: 0px;
+  height: 40px;
+}
+
+.block-shop-img {
+  width: 136px;
+  height: 100px;
+}
+
+.ball-img {
+  height: 146px;
+}
+
+.ball-p {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  height: 6px;
+}
+
+.block-shop-frame {
+  position: absolute;
+  width: 82px;
+  height: 24px;
+  background-color: #C68BA3;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 135px;
+  left: 77px;
+}
+
+.block-shop-frame-pay {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  background-color: #1A1A1A;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #D4AF37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    top: 130px;
+    left: 79px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.block-shop-img-frame {
+  width: 16px;
+  height: 16px;
+}
+
+.block-shop-frame-p {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.block-shop-frame-p-pay {
+  color: #D4AF37;
+  font-size: 16px;
+  font-weight: bold;
+}

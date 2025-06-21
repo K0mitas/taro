@@ -1,0 +1,389 @@
+/* Основные стили */
+.pay-count {
+  background: radial-gradient(ellipse calc(240px + 9vw) calc(175px + 2vh) at 50% 23%, rgb(39 9 127 / 82%), rgba(6, 0, 23, 1));
+  width: 100%;
+  min-height: 100dvh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Стили для woman */
+.pay-woman-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
+}
+
+.pay-woman-wrapper {
+  position: relative;
+  width: min(180px, 80vw);
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
+}
+
+.pay-stars {
+  position: absolute;
+  top: -60px;
+  left: -108px;
+  width: 198%;
+  z-index: 2;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
+}
+
+.pay-woman-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 0) 82%);
+  position: relative;
+  z-index: 1;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.9s ease-in forwards; /* Анимация появления */
+}
+
+.pay-dialog-div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 80px;
+  margin-top: 20px;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.pay-dialog-div-second {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 80px;
+  margin-top: 5px;
+  opacity: 0; 
+  animation: fadeIn 2s ease-in forwards;
+  top: -60px;
+}
+
+.pay-dialog-block {
+  max-width: 343px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 12px 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(5px);
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.9s ease-in forwards; /* Анимация появления */
+}
+
+.pay-first-text-welcom {
+  text-align: center;
+  color: #FFDAB9;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.24%;
+  margin: 0;
+}
+
+/* Стили формы */
+.input-div-pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 0.9s ease-in forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 343px;
+}
+
+.input-pay {
+  outline: none;
+  background-color: #302F2F;
+  border-radius: 16px;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 15px;
+  border: none;
+  padding-right: 50px;
+  transition: all 0.3s;
+}
+
+.input-pay:focus {
+  background-color: #1A1A1A;
+  outline: 2px solid #A68CD6;
+  box-shadow: 0 0 10px rgba(166, 140, 214, 0.5);
+}
+
+.pay-clear-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url('./../../Img/cross.svg') no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: transparent;
+}
+
+.input-container:has(.input-pay:focus) .pay-clear-btn,
+.input-container:has(.input-pay:not(:placeholder-shown)) .pay-clear-btn {
+  opacity: 1;
+}
+
+/* Стили кнопок */
+.pay-btn-ras-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.9s ease-in forwards; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pay-btn-ras {
+  width: 100%;
+  max-width: 340px;
+  height: 56px;
+  background-color: #D4AF37;
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.pay-btn-ras:hover {
+  background-color: #E8C252;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.pay-btn-ras:disabled {
+  background-color: #8a7a3a;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-welcome-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 0.9s ease-in forwards; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-welcome-tips {
+  background: none;
+  border: none;
+  color: #A68CD6;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 8px 16px;
+}
+
+.pay-nav-main-block {
+  display: none;
+  width: 100%;
+  height: 57px;
+  justify-content: center;
+  position: relative;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.topTextVisible {
+  display: flex;
+  width: 100%;
+  height: 57px;
+  justify-content: center;
+  position: relative;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.pay-nav-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 343px;
+  top: 266px;
+  left: -2px;
+  border-radius: 12px 12px 12px 0;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pay-container {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 2s ease-in forwards; /* Анимация появления */
+}
+
+.pay-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  perspective: 1000px;
+}
+
+.pay-card-wrapper {
+  width: 100px;
+  height: 170px;
+  position: relative;
+  cursor: pointer;
+}
+
+.pay-card-wrapper:nth-child(1) {
+   left: 170px;
+}
+
+.pay-card-wrapper:nth-child(2) {
+  top: -180px; 
+}
+
+.pay-card-wrapper:nth-child(3) {
+  top: -180px; 
+}
+
+.pay-card-wrapper:nth-child(4) {
+  top: -180px; 
+}
+
+.pay-card-wrapper:nth-child(5) {
+  right: 170px;
+}
+
+.pay-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.pay-card-wrapper.pay-card-selected .pay-card-inner {
+  transform: rotateY(180deg);
+}
+
+.pay-card-wrapper.pay-card-selected {
+  pointer-events: none; /* Отключает все взаимодействия */
+}
+
+.pay-card-front,
+.pay-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay-card-front {
+  background: #D4AF37;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.pay-card-wrapper:hover {
+  transform: translateY(8px) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 10px 4px #D4AF37;
+  border-radius: 8px;
+}
+
+.pay-card-back {
+  background: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.pay-card-wrapper:not(.pay-card-selected):hover {
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+}

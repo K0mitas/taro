@@ -1,0 +1,35 @@
+.addit-count {
+    background: radial-gradient(ellipse calc(240px + 9vw) calc(175px + 2vh) at 50% 23%, rgb(39 9 127 / 82%), rgba(6, 0, 23, 1));
+    width: 100%;
+    min-height: 100dvh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.dialog-div-addit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: fadeIn 0.9s ease-in-out 0.3s both;
+    opacity: 0;
+    margin-top: 16px;
+}
+
+.dialog-div-none {
+    display: none;
+}
+
+.first-text-welcom-addit {
+    text-align: center;
+    color: #D4AF37;
+    line-height: 150%;
+    letter-spacing: -0.24%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-welcome-div-none {
+    display: none;
+}
